@@ -41,7 +41,7 @@ nav a {
 .hero {
   display:flex;
   align-items:stretch;
-  justify-content:flex-start;
+  justify-content:space-between;
   padding:60px 40px;
   background:#eef5fb;
   gap:40px;
@@ -181,20 +181,11 @@ footer {
 <body>
 
 <header>
-<div class="logo-placeholder">
-    <img src="logo.png" alt="Rasi Enterprises" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-    <div class="logo-icon" style="display:none">
-      <!-- SVG fallback icon -->
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="10" r="5" stroke="white" stroke-width="2.5" fill="none"/>
-        <path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#4caf50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      </svg>
-    </div>
-    <div class="logo-text">
-      <span class="brand">RASI<span> ENTERPRISES</span></span>
-      <span class="sub">— Since 1997 —</span>
-    </div>
-  </div>
+<img src="logo.png">
+<div class="logo-text">
+    <span class="brand">RASI<span> ENTERPRISES</span></span>
+    <span class="sub">— Since 1997 —</span>
+</div>
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About Us</a>
