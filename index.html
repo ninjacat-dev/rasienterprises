@@ -40,11 +40,11 @@ nav a {
 /* HERO FIXED */
 .hero {
   display:flex;
-  align-items:center;
-  justify-content:space-between;
+  align-items:stretch;
+  justify-content:flex-start;
   padding:60px 40px;
   background:#eef5fb;
-  gap:40px;
+  gap:80px;
   flex-wrap:wrap;
 }
 
@@ -63,11 +63,13 @@ nav a {
 }
 
 .hero img {
-  width:100%;
-  max-width:450px;
-  height:auto;
-  border-radius:10px;
-  flex:1;
+  margin-left: auto;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  display: block;
 }
 
 .buttons a {
