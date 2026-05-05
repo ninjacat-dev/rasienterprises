@@ -3,391 +3,371 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rasi Enterprises | Respiratory Equipment & Services</title>
+<title>Rasi Enterprises</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
 body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f5f7fa;
-  color:#333;
+    color: #1a2a3a;
 }
 
 /* HEADER */
 header {
-  background:white;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-header img {
-  height:90px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-nav a {
-  margin:0 15px;
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
+.logo img {
+    height: 50px;
 }
 
-/* HERO FIXED */
-/* HERO FULL BACKGROUND */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: #0d3b5e;
+}
+
+.call {
+    font-weight: 600;
+    color: #0d3b5e;
+}
+
+/* HERO */
 .hero {
-  position: relative;
-  min-height: 520px;
-  padding: 80px 40px;
-  display: flex;
-  align-items: center;
-  background: url('hero.png') center/cover no-repeat;
-  color: white;
+    position: relative;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    color: #0d3b5e;
 }
 
-/* DARK OVERLAY */
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(13, 59, 94, 0.45);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('hero.jpg') no-repeat center/cover;
 }
 
-/* CONTENT ABOVE OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.75);
+}
+
 .hero-content {
-  margin-top: 25px;
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
+    position: relative;
+    max-width: 550px;
 }
 
-/* TEXT STYLING */
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-  margin: 12px 0;
-}
-  
-.buttons a {
-  margin-top: 25px;
-  margin-right:10px;
-  padding:12px 18px;
-  text-decoration:none;
-  border-radius:5px;
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
 
-.primary {
-  background:#1b98e0;
-  color:white;
+.buttons {
+    display: flex;
+    gap: 15px;
 }
 
-.secondary {
-  border:2px solid #1b98e0;
-  color:#1b98e0;
+.btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-/* SECTION */
-section {
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
-  text-align:center;
+.btn-primary {
+    background: #0d3b5e;
+    color: #fff;
 }
 
-h2 {
-  color:#0b4f6c;
-  margin-bottom:10px;
+.btn-outline {
+    border: 2px solid #0d3b5e;
+    color: #0d3b5e;
 }
 
-/* CARDS */ 
-.grid1 {
-  display:flex;
-  gap:20px;
-  margin-top:30px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-  .grid2 {
-  display:flex;
-  gap:30px;
-  margin-top:30px;
-  flex-wrap:wrap;
-  justify-content:center;
+/* SECTION TITLE */
+.section {
+    padding: 70px 60px;
+    text-align: center;
 }
 
-.card1 {
-  background:white;
-  padding:25px;
-  border-radius:10px;
-  width:280px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-.card1 i {
-  font-size:30px;
-  color:#1b98e0;
-  margin-bottom:10px;
+.section h2 {
+    margin-bottom: 10px;
+    color: #0d3b5e;
 }
 
-.card2 {
-  background:white;
-  padding:15px;
-  border-radius:10px;
-  width:210px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+.section p {
+    color: #555;
 }
-.card2 i {
-  font-size:30px;
-  color:#1b98e0;
-  margin-bottom:10px;
+
+/* WHAT WE DO */
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
 }
-  
-.product-card img {
-  width: 100%;
-  max-height: 120px;
-  object-fit: contain;
-  margin-bottom: 16px;
+
+.card {
+    flex: 1;
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left;
 }
-  
-/* SOLUTIONS */ 
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #0d3b5e;
+}
+
+/* SOLUTIONS */
 .solutions {
-  background: #eef5fb;
-  padding: 60px 20px;
-  border-radius: 12px;
-}
-  
-.solutions img {
-  height: 110px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-  
-.solutions a.primary {
-  display: inline-block;
-  margin-top: 30px;
+    background: #eef4f8;
 }
 
-.grid {
-  margin-bottom: 25px;
-}  
-  
-/* WHY */  
-.why-card {
-  text-align: center;
-}
-  
-.why-icon {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 0px;
-  background: #e8f5e9;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.solution-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
 }
 
-.why-icon i {
-  font-size: 42px;
-  color: #2e7d32;
-  line-height: 1;   /* IMPORTANT: removes vertical offset */
+.solution {
+    text-align: center;
 }
-  
+
+.solution img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.catalog-btn {
+    margin-top: 30px;
+}
+
+/* WHY */
+.why {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.why div {
+    text-align: center;
+    flex: 1;
+}
+
+/* TRUST */
+.trust {
+    margin: 60px;
+    padding: 25px;
+    background: #eef4f8;
+    border-radius: 10px;
+    text-align: center;
+}
+
 /* CTA */
 .cta {
-  background:#0b4f6c;
-  color:white;
-  padding:40px;
-  text-align:center;
+    background: linear-gradient(to right, #0d3b5e, #1c6ea4);
+    color: #fff;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.cta a {
-  margin:10px;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:5px;
+.cta .buttons .btn-primary {
+    background: #fff;
+    color: #0d3b5e;
 }
 
-.cta .primary {
-  background:white;
-  color:#0b4f6c;
+.cta .buttons .btn-outline {
+    border-color: #fff;
+    color: #fff;
 }
-
-.cta .secondary {
-  border:2px solid white;
-  color:white;
-}
-
-/* FOOTER */
-footer {
-  text-align:center;
-  padding:20px;
-  background:#eee;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    max-width:100%;
-  }
-}
-
 </style>
+
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-<a href="index.html">
-  <img src="logo.png" alt="Rasi Enterprises Logo">
-</a>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="catalogue.html">Our Solutions</a>
-<a href="events.html">Events</a>
-<a href="testimonials.html">Testimonials</a>
-<a href="contact.html">Contact Us</a>
-</nav>
+    <div class="logo">
+        <img src="logo.png">
+    </div>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Our Solutions</li>
+            <li>Events</li>
+            <li>Testimonials</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+
+    <div class="call">
+        Call Us Now <br> +91 422 2595627
+    </div>
 </header>
 
 <!-- HERO -->
-<div class="hero">
-<div class="hero-content">
-<h1>Trusted Respiratory Care Solutions</h1>
-<p>Serving Coimbatore and across South India</p>
-<p>Rasi Enterprises provides reliable medical equipment, rentals, and servicing support with over 20 years of experience in respiratory care.</p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Trusted Respiratory Care Solutions</h1>
+        <p>
+            Serving Coimbatore and across South India. Rasi Enterprises provides reliable medical equipment, rentals, and servicing support with over 20 years of experience in respiratory care.
+        </p>
 
-<div class="buttons">
-<a href="contact.html" class="primary">Get a Quote</a>
-<a href="tel:+914222595627" class="secondary">Call Now</a>
-</div>
-</div>
-
-<!-- <img src="hero.png" alt="Equipment"> -->
-</div>
+        <div class="buttons">
+            <div class="btn btn-primary">GET A QUOTE</div>
+            <div class="btn btn-outline">CALL NOW</div>
+        </div>
+    </div>
+</section>
 
 <!-- WHAT WE DO -->
-<section>
-<h2>What We Do</h2>
-<p>We specialize in providing high-quality respiratory care equipment and support services for hospitals, clinics and home use.</p>
+<section class="section">
+    <h2>What We Do</h2>
+    <p>We specialize in providing high-quality respiratory care equipment and support services for hospitals, clinics and home use.</p>
 
-<div class="grid1">
-<div class="card1">
-<i class="fas fa-hospital"></i>
-<h3>Medical Equipment Sales</h3>
-<p>Wide range of respiratory care equipment and accessories.</p>
-</div>
+    <div class="cards">
+        <div class="card">
+	<i class="fas fa-hospital"></i>
+            <h3>Medical Equipment Sales</h3>
+            <p>Wide range of respiratory care equipment and accessories.</p>
+        </div>
 
-<div class="card1">
-<i class="fas fa-lungs"></i>
-<h3>Equipment Rentals</h3>
-<p>Short-term and long-term rentals for CPAP, BiPAP, Oxygen Concentrators and more.</p>
-</div>
+        <div class="card">
+	<i class="fas fa-lungs"></i>
+            <h3>Equipment Rentals</h3>
+            <p>Short-term and long-term rentals for CPAP, BiPAP, Oxygen Concentrators and more.</p>
+        </div>
 
-<div class="card1">
-<i class="fas fa-tools"></i>
-<h3>Equipment Servicing & Support</h3>
-<p>Professional servicing, maintenance and technical support.</p>
-</div>
-</div>
+        <div class="card">
+	<i class="fas fa-tools"></i>
+            <h3>Equipment Servicing & Support</h3>
+            <p>Professional servicing, maintenance and technical support.</p>
+        </div>
+    </div>
 </section>
 
 <!-- SOLUTIONS -->
-<section class="solutions">
-<h2>Our Solutions</h2>
-<p>We offer a wide range of respiratory care equipment and accessories to meet diverse patient and clinical needs.</p>
+<section class="section solutions">
+    <h2>Our Solutions</h2>
+    <p>We offer a wide range of respiratory care equipment and accessories to meet diverse patient and clinical needs.</p>
 
-<div class="grid2">
-<div class="card2">
-  <img src="product1.png">
-  <p>Oxygen Concentrators</p>
-</div>
+    <div class="solution-grid">
+        <div class="solution">
+            <img src="product1.jpg">
+            <p>Oxygen Concentrators</p>
+        </div>
 
-<div class="card2">
-  <img src="product2.png">
-  <p>CPAP & BiPAP Machines</p>
-</div>
+        <div class="solution">
+            <img src="product2.jpg">
+            <p>CPAP & BiPAP Machines</p>
+        </div>
 
-<div class="card2">
-  <img src="product3.png">
-  <p>Nebulizers</p>
-</div>
+        <div class="solution">
+            <img src="product3.jpg">
+            <p>Nebulizers</p>
+        </div>
 
-<div class="card2">
-  <img src="product4.png">
-  <p>Masks & Consumables</p>
-</div>
-</div>
+        <div class="solution">
+            <img src="product4.jpg">
+            <p>Masks & Consumables</p>
+        </div>
+    </div>
 
-<div class="buttons">
-  <a href="catalogue.html" class="primary">View Full Catalogue</a>
-</div>
-
+    <div class="catalog-btn">
+        <div class="btn btn-primary">View Full Catalogue</div>
+    </div>
 </section>
 
 <!-- WHY -->
-<section>
-<h2>Why Rasi Enterprises</h2>
+<section class="section">
+    <h2>Why Rasi Enterprises</h2>
 
-<div class="grid2">
-<div class="card2">
-  <div class="why-icon">
-    <i class="fas fa-award"></i>
-  </div>
-  <h4>Over 20 Years of Experience</h4>
-    <p>Serving patients and healthcare providers since 1997.</p>
-</div>
+    <div class="why">
+        <div>
+ 	<i class="fas fa-award"></i>
+            <h4>Over 20 Years of Experience</h4>
+            <p>Serving patients and healthcare providers since 1997.</p>
+        </div>
 
-<div class="card2">
-  <div class="why-icon">
-    <i class="fas fa-shield-alt"></i>
-  </div>
-  <h4>Trusted Across South India</h4>
-  <p>Associated with hospitals, clinics and families across the region.</p>
-</div>
+        <div>
+	<i class="fas fa-shield-alt"></i>
+            <h4>Trusted Across South India</h4>
+            <p>Associated with hospitals, clinics and families across the region.</p>
+        </div>
 
-<div class="card2">
-  <div class="why-icon">
-    <i class="fas fa-clock"></i>
-  </div>
-  <h4>Reliable & Timely Support</h4>
-    <p>Prompt service and dedicated technical support you can depend on.</p>
-</div>
+        <div>
+	<i class="fas fa-clock"></i>
+            <h4>Reliable & Timely Support</h4>
+            <p>Prompt service and dedicated technical support you can depend on.</p>
+        </div>
 
-<div class="card2">
-  <div class="why-icon">
-    <i class="fas fa-heart"></i>
-  </div>
-  <h4>Focus on Patient Care & Safety</h4>
-  <p>Committed to delivering safe, reliable and high-quality solutions.</p>
-  </div>
-</div>
+        <div>
+ 	<i class="fas fa-heart"></i>
+            <h4>Focus on Patient Care & Safety</h4>
+            <p>Committed to delivering safe, reliable and high-quality solutions.</p>
+        </div>
+    </div>
 </section>
 
-<!-- CTA -->
-<div class="cta">
-<h2>Need Respiratory Equipment or Support?</h2>
-<p>Get in touch with us for product enquiries, rentals, or service support.</p>
-
-<a href="contact.html" class="primary">Contact Us</a>
-<a href="contact.html" class="secondary">Call Now</a>
+<!-- TRUST -->
+<div class="trust">
+    <h3>Trusted by Patients & Professionals</h3>
+    <p>We have built long-term relationships with healthcare providers and families.</p>
 </div>
 
-<footer>
-© 2026 Rasi Enterprises
-</footer>
+<!-- CTA -->
+<section class="cta">
+    <h2>Need Respiratory Equipment or Support?</h2>
+    <p>Get in touch with us for product enquiries, rentals, or service support.</p>
+
+    <div class="buttons">
+        <div class="btn btn-outline">CONTACT US</div>
+        <div class="btn btn-primary">CALL NOW</div>
+    </div>
+</section>
 
 </body>
 </html>
