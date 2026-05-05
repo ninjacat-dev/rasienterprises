@@ -38,33 +38,42 @@ nav a {
 }
 
 /* HERO FIXED */
+/* HERO FULL BACKGROUND */
 .hero {
+  position: relative;
+  min-height: 520px;
+  padding: 80px 40px;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px;
-  background: #eef5fb;
-  gap: 60px;
+
+  background: url('hero.png') center/cover no-repeat;
+  color: white;
 }
 
-/* TEXT */
-.hero-text {
-  flex: 1;
-  max-width: 520px;
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 59, 94, 0.65);
 }
 
-/* IMAGE */
-.hero img {
-  flex: 1;
+/* CONTENT ABOVE OVERLAY */
+.hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 600px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
 }
 
-.hero {
-  min-height: 500px;
+/* TEXT STYLING */
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin: 12px 0;
 }
   
 .buttons a {
@@ -255,7 +264,7 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-<div class="hero-text">
+<div class="hero-content">
 <h1>Trusted Respiratory Care Solutions</h1>
 <p>Serving Coimbatore and across South India</p>
 <p>Rasi Enterprises provides reliable medical equipment, rentals, and servicing support with over 20 years of experience.</p>
@@ -266,7 +275,7 @@ footer {
 </div>
 </div>
 
-<img src="hero.png" alt="Equipment">
+<!-- <img src="hero.png" alt="Equipment"> -->
 </div>
 
 <!-- WHAT WE DO -->
