@@ -39,39 +39,34 @@ nav a {
 
 /* HERO FIXED */
 .hero {
-  display:flex;
-  align-items:stretch;
-  justify-content:space-between;
-  padding:60px 40px;
-  background:#eef5fb;
-  gap:40px;
-  flex-wrap:wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background: #eef5fb;
+  gap: 60px;
 }
 
+/* TEXT */
 .hero-text {
-  max-width:500px;
-  flex:1;
+  flex: 1;
+  max-width: 520px;
 }
 
-.hero h1 {
-  font-size:36px;
-  color:#0b4f6c;
-}
-
-.hero p {
-  margin:20px 0;
-}
-
+/* IMAGE */
 .hero img {
-  margin-left: auto;
-  max-width: 480px;
+  flex: 1;
+  max-width: 600px;
   width: 100%;
   height: auto;
-  border-radius: 10px;
   object-fit: contain;
   display: block;
 }
 
+.hero {
+  min-height: 500px;
+}
+  
 .buttons a {
   margin-right:10px;
   padding:12px 18px;
@@ -344,7 +339,7 @@ footer {
 
 <div class="card2">
   <div class="why-icon">
-    <!--<i class="fas fa-heart"></i> -->
+    <i class="fas fa-heart"></i>
   </div>
   <h4>Patient-Focused Care</h4>
   <p></p>
